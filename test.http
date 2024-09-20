@@ -1,0 +1,42 @@
+### Create a user
+POST http://localhost:8080/v1/users
+Content-Type: application/json
+
+{
+    "firstName": "jonathan",
+    "lastName": "davis",
+    "email": "j.davis@example.com",
+    "age": 18,
+    "gender": "male"
+}
+
+### Get all users
+GET http://localhost:8080/v1/users
+
+### Update user with PUT
+PUT http://localhost:8080/v1/users/1
+Content-Type: application/json
+
+{
+    "firstName": "bobby",
+    "lastName": "johnson",
+    "email": "bobby.john@example.com",
+    "age": 25
+}
+
+### Update user with PATCH
+PATCH http://localhost:8080/v1/users/1
+Content-Type: application/json
+
+{
+    "gender": "female"
+}
+
+### Get updated user
+GET http://localhost:8080/v1/users/1
+
+### Delete user
+DELETE http://localhost:8080/v1/users/1
+
+### Verify user is deleted
+GET http://localhost:8080/v1/users
